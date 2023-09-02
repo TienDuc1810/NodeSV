@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create User</title>
+    <title>Delete User</title>
     <link rel="stylesheet" href="/css/home.css">
 </head>
 
@@ -14,26 +14,19 @@
         <li><a href="/create">Create User</a></li>
     </ul>
     <div class="form">
-        <form action="/update-user" method="post">
+        <form action="/delete-user" method="post">
             <fieldset>
-                <legend>Form update users</legend>
+                <legend>Form delete users</legend>
                 <div class="hide-id">
                     <label>ID: </label>
                     <input type="text" name="UserID" value="<%= ID.id %>"/>
                 </div>
-                <div class="item">
+                <div class="item-delete">
+                    <p>Are you sure delete user with email</p>
                     <label>Email: </label>
                     <input type="text" name="email" value="<%= ID.email %>"/>
                 </div>
-                <div class="item">
-                    <label>Name: </label>
-                    <input type="text" name="name" value="<%= ID.name %>"/>
-                </div>
-                <div class="item">
-                    <label>City: </label>
-                    <input type="text" name="city" value="<%= ID.city %>"/>
-                </div>
-                <button>Save</button>
+                <button>Delete</button>
             </fieldset>
         </form>
     </div>
